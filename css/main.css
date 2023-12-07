@@ -1,0 +1,405 @@
+/*$color-button:#f54e;*/
+:root{
+    --color-letter:#fff;
+    --color-backgroung:#012032;
+   --color-title:#128bc0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family:sans-serif;
+}
+/*inicio da formatação do header*/
+#header{
+    width: 100%;
+    height: 80px;
+    gap: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:var(--color-backgroung);
+    position: relative;
+}
+#header .logo { 
+    
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--color-title);    
+}
+#header .navbar {    
+    gap: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#header .navbar .list-links{
+    gap: 50px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+#header .navbar .list-links li a{
+    color: var(--color-letter);
+    position: relative;   
+}
+#header .navbar .list-links li a::after{           
+     content:"";
+     width: 20px;
+     height: 5px;
+     top: 30px;
+     left:30px;
+     border-radius: 50px;
+     position: absolute;
+     background-color: var(--color-title);
+     transform: translate(-50%,-50%);
+     transition: all 0.3s ease-in-out  ;    
+}
+#header .navbar .list-links li a:hover::after{
+    width: 50px;
+    color:var(--color-title);
+}
+#header .btn-mobile{
+    margin-right:50px;
+    font-size: 1.5rem;
+    font-weight: 100;
+    color: var(--color-title); 
+    cursor: pointer;
+    display: none;
+}
+#container section{
+    width: 100%;
+    height: 50vh;
+}
+#container .section-hero .menu-mobile{
+    width: 300px;
+    height: 300px;
+    gap: 15px;
+    top: 55px;
+    right: 50px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position:absolute;
+    backdrop-filter: blur(50px);
+    background-color:rgba(#0052759d,0.5);
+}
+#container .section-hero .menu-mobile ul{
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+
+}
+#container .section-hero .menu-mobile ul li a {
+    padding: 50px 100px;
+    font-size: 20px;
+    font-weight: 20;
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    
+}
+
+
+/*estilizacãço do principal*/
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+   
+}
+#container .section-hero{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/Sala-cirugia.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#container .section-hero .menu-mobile ul li a:hover{
+    background-color: #d10f0f;
+}
+#container .section-hero .content{
+    width: 70%;
+    height: 200px;
+    top: 8rem;
+    right:5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    border-radius: 10px;
+}
+#container .section-hero .content h3{
+    padding: 10px 150px;
+    text-align: center;
+    line-height: 25px;
+    font-size: medium;
+    font-weight: 150;
+    color: #fff;  
+}
+
+#container .section-hero .content button{
+    width: 200px;
+    height: 40px;
+    padding: 5px;
+    font-size: small;
+    border: 0;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background 0.5s ease-in-out;
+    background: var(--color-backgroung); 
+}
+#container .section-hero .content button  a{
+    padding: 10px 17px;
+    color: #fff;
+}
+#container .section-hero .content button:hover{
+    background-color:#013553 ;
+}
+#container .section-center{
+    width: 100%;
+    height: 50vh;
+    padding: 0px 180px;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../assets/Phone.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+/*Segunda secção*/
+#container .sobrenos{
+    width: 100%;
+    height: 70vh;
+    padding: 0px 180px;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0120324b;
+    
+}
+#container .sobrenos .sobrenos-video video{
+    width: 500px;
+    border-radius: 10px;
+    /*box-shadow: 25px 25px 10px #fff;*/
+}
+#container .sobrenos .sobrenos-text h3{
+    padding-bottom: 20px;
+    font-size: 40px;
+    color: var(--color-backgroung);
+}
+#container .sobrenos .sobrenos-text p{
+    font-size: 25px;
+    text-align: justify;
+    line-height: 35px;
+    color: var(--color-title);
+}
+/*--Terceira seção--*/
+#container .offer{
+    width: 100%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-backgroung);
+}
+#container .offer .offer-text h2{
+    padding: 10px 0px;
+    border-bottom: 5px solid var(--color-title);
+    border-radius: 10px;
+    color:var(--color-title);
+}
+#container .offer .offer-content{
+    width: 100%;
+    height: 50vh;
+    gap: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#container .offer .offer-content .sickness{
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: 25px 25px 10px #128cc060;
+    background-color: transparent #128cc095;
+    backdrop-filter: blur(20px);
+}
+#container .offer .offer-content .sickness img{
+    padding: 10px 0;
+}
+#container .offer .offer-content .sickness p{
+    color: var(--color-letter);
+    line-height: 25px;
+    text-align: center;
+   
+}
+/*Quarta secção*/
+#container .section-center{
+    width: 100%;
+    height: 70vh;
+}
+#container .section-center .subscrive{
+    width: 500px;
+    height: 150px;
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00527521;
+    backdrop-filter: blur(20px);
+}
+#container .section-center .subscrive input{
+    width: 300px;
+    height: 30px;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+#container .section-center .subscrive .btn-subscrive{
+    width: 150px;
+    height: 30px;
+    border: 0;
+    outline: 0;
+    color: #fff;
+    cursor: pointer;
+    background-color: #005b8f;
+  
+}
+#container .section-center .divice-text{
+    width: 400px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container .section-center .divice-text p{
+    text-align: justify;
+    line-height: 25px;
+    color: var(--color-backgroung);
+}
+/*Roda pé*/
+#container #footer{
+    width: 100%;
+    height: 35vh; 
+}
+#container #footer .content{
+    width: 100%;
+    height: 30vh;
+    gap: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#012032;
+    backdrop-filter: blur(20px);  
+}
+#container #footer .content .endereco h3{
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 25px;
+    color:var(--color-title);
+}
+#container #footer .content .endereco p{
+    padding-bottom: 10px;
+    color: #fff;
+}
+#container #footer .content .menu-footer .menu ul li {
+    padding-top: 10px ;
+}
+#container #footer .content .menu-footer .menu ul li a {
+    color: var(--color-letter);
+    position: relative;
+}
+#container #footer .content .menu-footer .menu ul li a::after{
+    content:"";
+    width: 20px;
+    height: 5px;
+    top: 28px;
+    left:30px;
+    border-radius: 50px;
+    position: absolute;
+    background-color: var(--color-title);
+    transform: translate(-50%,-50%);
+    transition: all 0.3s ease-in-out  ;
+}
+#container #footer .content .menu-footer .menu ul li a:hover::after{
+    width:50px;
+}
+#container #footer .content .social-media h3{
+    padding-bottom: 25px;
+    color: var(--color-title);
+
+}
+
+#container #footer  .copyright{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-title);  
+}
+#container #footer  .copyright p{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--color-letter);
+}
+
+@media(max-width:660px){
+    #header .btn-mobile,
+    #container .img-hero .menu-mobile{
+        display: block;
+    }
+    #header .navbar,#container
+     .img-hero .content
+    {
+        display:none
+    }
+}
+@media(max-width:660px){
+    #container 
+    #footer .content{
+        max-width: 600px;
+        height: 350px;
+        gap: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+   
+}
+/*@media(max-width:900px){
+    #container
+     .img-hero .content
+    {
+        display:none
+    }
+}
+*/
